@@ -9,6 +9,7 @@ const variants = {
 };
 
 const articleUrl = "https://sxsprtscnc.ru/tpost/forest-bathing";
+const courseUrl = "https://sektaschool.ru/online/summerprime?utm_source=bot&utm_medium=gaidoteki&utm_campaign=summerprime";
 const apps = [
   ["AppStore", "https://apps.apple.com/us/app/icook-meal-planner-food-prep/id1434244144?ppid=19b9b54b-a30a-424d-9dcf-3515ce74b3ba"],
   ["RuStore", "https://apps.rustore.ru/app/com.insolence.recipes.rustore"],
@@ -130,19 +131,26 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         </div>
       </section>
 
-      <section className="next-step section">
-        <div className="next-copy">
-          <div className="section-label">08 / твой следующий шаг</div>
-          <h2>Начни с<br /><em>15 минут</em></h2>
-          <p>Выбери ближайший парк, в котором тебе ещё не удалось побывать, и реши, какой перекус возьмёшь с собой в ближайшие выходные. Начни с 15-минутной прогулки — этого уже достаточно, чтобы запустить процесс «разморозки».</p>
+      <section className="course-offer section">
+        <div className="course-photo">
+          <img src="/walk-images/summer-prime-hero.jpg" alt="Летнее утро и отдых на солнце" />
+          <span>3 недели</span>
         </div>
-        <form className="walk-card">
-          <p>План на выходные</p>
-          <label><input type="checkbox" /> <span>Выбрать ближайший парк, где ещё не удалось побывать</span></label>
-          <label><input type="checkbox" /> <span>Решить, какой перекус взять с собой</span></label>
-          <label><input type="checkbox" /> <span>Запланировать 15-минутную прогулку</span></label>
-          <div className="walk-ready">Начни с 15 минут.<br />Этого уже достаточно.</div>
-        </form>
+        <div className="course-copy">
+          <div className="section-label">08 / #Sekta · продолжение</div>
+          <p className="course-name">Фокусный онлайн-курс</p>
+          <h2>Летний<br />прайм</h2>
+          <p className="course-lead">В гайде — один способ добавить движения. В «Летнем прайме» — три недели коротких тренировок, ухода за собой и лёгкого рациона.</p>
+          <div className="course-facts">
+            <span>тренировки до 30 минут</span>
+            <span>старт в любой день</span>
+            <span>самостоятельный формат</span>
+          </div>
+          <div className="course-buy">
+            <div><strong>2 900 ₽</strong><small>за весь курс</small></div>
+            <a href={courseUrl} target="_blank" rel="noreferrer">Перейти к курсу <span>↗</span></a>
+          </div>
+        </div>
       </section>
 
       <footer className="guide-footer"><div><b>#sekta</b><span>×</span><b>Mary’s Recipes</b></div><p>Пусть это лето станет временем, когда ты разрешишь себе просто быть, гулять и наслаждаться моментом.</p><Link href="/">Посмотреть другие упаковки ↑</Link></footer>
