@@ -40,7 +40,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
       <header className="hero">
         <div className="hero-copy">
           <p className="kicker">{current.kicker}</p>
-          <h1>{variant === "newspaper" ? <>Ходить пешком<br />официально считается</> : variant === "thaw" ? <>Пять минут,<br />чтобы началась<br />разморозка</> : <>Гулять<br />считается</>}</h1>
+          <h1>{variant === "newspaper" ? <>Прогулка —<br />уже движение</> : variant === "thaw" ? <>Пять минут,<br />чтобы началась<br />разморозка</> : <>Гулять<br />считается</>}</h1>
           <p className="hero-deck">Время для себя: как добавить движения и энергии в каждый день</p>
           <a href="#start" className="primary-link">Начать прогулку <span>↓</span></a>
         </div>
