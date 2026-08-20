@@ -15,9 +15,9 @@ const apps = [
   ["Google Play", "https://play.google.com/store/apps/details?id=com.insolence.recipes&listing=sekta"],
 ];
 const videos = [
-  ["01", "Короткая функциональная тренировка", "https://kinescope.io/pDzaCEzeE11dAP4JMb3KPs", "/walk-images/p6-30.jpg"],
-  ["02", "Движение для всего тела", "https://kinescope.io/pAZW7gvcA6AAe7wu1jnCsN", "/walk-images/p6-31.jpg"],
-  ["03", "Парная тренировка", "https://kinescope.io/v67KXj7zh49Dm3JZgSZ3Ge", "/walk-images/p6-32.jpg"],
+  ["01", "Короткая функциональная тренировка", "https://kinescope.io/pDzaCEzeE11dAP4JMb3KPs", "/walk-images/workout-1.jpg"],
+  ["02", "Движение для всего тела", "https://kinescope.io/pAZW7gvcA6AAe7wu1jnCsN", "/walk-images/workout-2.jpg"],
+  ["03", "Парная тренировка", "https://kinescope.io/v67KXj7zh49Dm3JZgSZ3Ge", "/walk-images/workout-3.jpg"],
 ];
 
 function Flower({ children }: { children?: React.ReactNode }) {
@@ -126,7 +126,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         <div className="workout-head"><h2>Три тренировки<br />под открытым небом</h2><p>Их можно делать в кроссовках прямо на траве или дорожке, не пачкая одежду и не таская с собой коврик.</p></div>
         <p className="important"><b>Важно:</b> тебе не обязательно выполнять всё на максимум. Можно просто попробовать начать и посмотреть, как откликнется тело.</p>
         <div className="video-grid">
-          {videos.map(([number, title, url, image]) => <a key={number} href={url} target="_blank" rel="noreferrer" className="video-card"><img src={image} alt="Превью видеотренировки" /><span className="play">▶</span><small>{number}</small><h3>{title}</h3></a>)}
+          {videos.map(([number, title, url, image]) => <a key={number} href={url} target="_blank" rel="noreferrer" className="video-card"><span className="video-cover"><img src={image} alt="Превью видеотренировки" /><span className="play">▶</span></span><small>{number}</small><h3>{title}</h3></a>)}
         </div>
       </section>
 
