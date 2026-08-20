@@ -5,24 +5,24 @@ const options = [
     href: "/editorial",
     number: "01",
     title: "Гулять считается",
-    note: "Сильная редакционная версия",
-    copy: "Крупные цифры, чистая сетка и живые фотографии. Гайд читается как летний спецпроект.",
+    note: "Редакционная версия",
+    copy: "Крупные цифры, чистая сетка и живые фотографии.",
     className: "choice editorial-choice",
   },
   {
     href: "/newspaper",
     number: "02",
     title: "Прогулочная газета",
-    note: "Ироничная и заметная версия",
-    copy: "Факты становятся новостями, практики — колонками, а 15 минут — главным выпуском дня.",
+    note: "Газетная версия",
+    copy: "Факты и практические советы собраны как полосы летней газеты.",
     className: "choice newspaper-choice",
   },
   {
     href: "/thaw",
     number: "03",
     title: "Разморозка",
-    note: "Мягкая атмосферная версия",
-    copy: "Страница постепенно выходит из зимней паузы в цвет, воздух, еду и движение.",
+    note: "Атмосферная версия",
+    copy: "Мягкий переход от зимней паузы к прогулкам и движению.",
     className: "choice thaw-choice",
   },
 ];
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="brand-line"><span>#sekta</span><span>×</span><span>Mary’s Recipes</span></div>
         <p className="eyebrow">Один гайд · три упаковки</p>
         <h1>Сезон<br />прогулок</h1>
-        <p className="chooser-lead">Внутри каждой версии сохранены рекомендации, лесное купание, партнёрская подборка рецептов, три тренировки и финальный шаг из исходного гайда.</p>
+        <p className="chooser-lead">Во всех трёх версиях один и тот же материал: рекомендации, лесное купание, рецепты Mary’s Recipes, три тренировки и следующий шаг.</p>
       </header>
       <section className="choice-grid" aria-label="Варианты упаковки">
         {options.map((option) => (
@@ -48,7 +48,7 @@ export default function Home() {
           </Link>
         ))}
       </section>
-      <footer className="chooser-foot">Контент не переписан — поменялись только ритм, визуальный язык и способ взаимодействия.</footer>
+      <footer className="chooser-foot">Содержание одно. Меняется только подача.</footer>
     </main>
   );
 }

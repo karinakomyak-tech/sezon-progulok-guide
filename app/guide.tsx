@@ -5,7 +5,7 @@ type Variant = "editorial" | "newspaper" | "thaw";
 const variants = {
   editorial: { label: "Гулять считается", kicker: "Летний спецпроект" },
   newspaper: { label: "Прогулочная газета", kicker: "Свежий выпуск" },
-  thaw: { label: "Разморозка", kicker: "Мягкий маршрут к движению" },
+  thaw: { label: "Разморозка", kicker: "Можно начать с пяти минут" },
 };
 
 const articleUrl = "https://sxsprtscnc.ru/tpost/forest-bathing";
@@ -15,9 +15,9 @@ const apps = [
   ["Google Play", "https://play.google.com/store/apps/details?id=com.insolence.recipes&listing=sekta"],
 ];
 const videos = [
-  ["01", "Короткая функциональная тренировка", "https://kinescope.io/pDzaCEzeE11dAP4JMb3KPs", "/walk-images/workout-1.jpg"],
-  ["02", "Движение для всего тела", "https://kinescope.io/pAZW7gvcA6AAe7wu1jnCsN", "/walk-images/workout-2.jpg"],
-  ["03", "Парная тренировка", "https://kinescope.io/v67KXj7zh49Dm3JZgSZ3Ge", "/walk-images/workout-3.jpg"],
+  ["01", "Видеотренировка 1", "https://kinescope.io/pDzaCEzeE11dAP4JMb3KPs", "/walk-images/workout-1.jpg"],
+  ["02", "Видеотренировка 2", "https://kinescope.io/pAZW7gvcA6AAe7wu1jnCsN", "/walk-images/workout-2.jpg"],
+  ["03", "Видеотренировка 3", "https://kinescope.io/v67KXj7zh49Dm3JZgSZ3Ge", "/walk-images/workout-3.jpg"],
 ];
 
 function Flower({ children }: { children?: React.ReactNode }) {
@@ -40,9 +40,9 @@ export function WalkGuide({ variant }: { variant: Variant }) {
       <header className="hero">
         <div className="hero-copy">
           <p className="kicker">{current.kicker}</p>
-          <h1>{variant === "newspaper" ? <>Прогулка —<br />уже движение</> : variant === "thaw" ? <>Пять минут,<br />чтобы началась<br />разморозка</> : <>Гулять<br />считается</>}</h1>
+          <h1>{variant === "newspaper" ? <>Прогулка —<br />уже движение</> : variant === "thaw" ? <>Начни<br />с пяти минут</> : <>Гулять<br />считается</>}</h1>
           <p className="hero-deck">Время для себя: как добавить движения и энергии в каждый день</p>
-          <a href="#start" className="primary-link">Начать прогулку <span>↓</span></a>
+          <a href="#start" className="primary-link">Читать гид <span>↓</span></a>
         </div>
         <figure className="hero-image"><img src={variant === "newspaper" ? "/walk-images/p3-04.jpg" : "/walk-images/p4-12.jpg"} alt="Прогулка в зелёном парке" /><figcaption>Летний гид по активности и перекусам</figcaption></figure>
         <div className="hero-sticker">20–40<br /><small>минут в день</small></div>
@@ -65,13 +65,13 @@ export function WalkGuide({ variant }: { variant: Variant }) {
           <article className="stat main-stat"><strong>150–300</strong><span>минут умеренной активности в неделю достаточно, чтобы поддержать сердце и обмен веществ.</span></article>
           <article className="stat"><strong>20–40</strong><span>минут активной прогулки в день — и ты уже в «зелёной зоне» здоровья.</span></article>
           <article className="stat image-stat"><img src="/walk-images/p3-05.jpg" alt="Прогулка за продуктами тоже считается движением" /></article>
-          <article className="stat"><strong>Любое</strong><span>движение — за кофе, за продуктами или уборка дома — уже вклад в твой энергетический баланс.</span></article>
+          <article className="stat"><strong>Любое</strong><span>движение — будь то прогулка за любимым кофе, закупка продуктов или уборка дома — уже вклад в твой энергетический баланс.</span></article>
         </div>
       </section>
 
       <section className="why section">
         <div className="section-label">03 / почему это работает</div>
-        <h2>Не закрыть кольца.<br />Почувствовать себя живее.</h2>
+        <h2>Почему это работает<br />и зачем это тебе</h2>
         <div className="reason-list">
           <article><span>01</span><div><h3>Движение как антистресс</h3><p>Регулярная активность помогает справляться со стрессом и стабилизирует эмоциональный фон.</p></div></article>
           <article><span>02</span><div><h3>Маленькие шаги — большой результат</h3><p>Даже небольшое увеличение привычной активности, например прогулка вместо поездки на автобусе, ощутимо улучшает самочувствие.</p></div></article>
@@ -85,12 +85,12 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         <div className="forest-copy">
           <div className="section-label">04 / синрин-йоку</div>
           <h2>Лесное купание:<br />бесплатное спа<br />для мозга</h2>
-          <p>Если одна мысль о тренировке пока вызывает желание поглубже зарыться в одеяло, как насчёт свидания с природой? В Японии это называют синрин-йоку, или «лесное купание»: можно «купаться» в атмосфере леса, звуках и запахах.</p>
+          <p>Если одна мысль о тренировке пока вызывает желание поглубже зарыться в одеяло, у нас есть предложение получше. Как насчёт свидания с природой? В Японии это называют синрин-йоку, или «лесное купание»: можно «купаться» в атмосфере леса, звуках и запахах.</p>
           <ul className="forest-facts">
-            <li><b>«Зелёная йога» для глаз.</b> Природные пейзажи дают глазам и вниманию ненаправленный отдых.</li>
+            <li><b>«Зелёная йога» для глаз.</b> Природные пейзажи дают глазам и вниманию ненаправленный отдых. Такой мягкий визуальный опыт может снижать когнитивную усталость.</li>
             <li><b>Смена фокуса.</b> Взгляд свободно переключается с ближнего на дальнее расстояние, снижая напряжение глаз.</li>
             <li><b>Снижение уровня стресса.</b> Контакт с природой помогает регулировать уровень гормонов стресса и улучшает эмоциональный фон.</li>
-            <li><b>Свежий воздух.</b> В лесу меньше городских факторов загрязнения и больше фитонцидов.</li>
+            <li><b>Свежий воздух.</b> В лесу меньше городских факторов загрязнения и больше фитонцидов — летучих веществ, которые вырабатываются растениями и могут влиять на иммунитет и уровень стресса.</li>
           </ul>
           <a className="text-link" href={articleUrl} target="_blank" rel="noreferrer">Что такое forest bathing и зачем он нужен — читать в Sex Sport Science ↗</a>
         </div>
@@ -98,11 +98,11 @@ export function WalkGuide({ variant }: { variant: Variant }) {
 
       <section className="practice section">
         <div className="section-label">05 / как сделать частью жизни</div>
-        <h2>Прогулка без нормативов</h2>
+        <h2>Как сделать прогулки<br />частью жизни</h2>
         <div className="practice-grid">
-          <article><Flower>1</Flower><h3>Вернись в момент</h3><p>На минуту отложи телефон и просто заметь: какого цвета сегодня небо? Как пахнет воздух после дождя?</p></article>
-          <article><Flower>2</Flower><h3>Прими любой результат</h3><p>Если сегодня удалось дойти только до ближайшего сквера — это уже победа. «Попробовать» всегда лучше, чем «надо обязательно».</p></article>
-          <article><Flower>3</Flower><h3>Выбери свой темп</h3><p>Нет необходимости бежать или идти быстрым шагом. Гуляй так, как тебе комфортно.</p></article>
+          <article><Flower>1</Flower><h3>Осознанность в моменте</h3><p>На минуту отложи телефон и просто заметь: какого цвета сегодня небо? Как пахнет воздух после дождя?</p></article>
+          <article><Flower>2</Flower><h3>Принимай любой результат</h3><p>Если сегодня удалось дойти только до ближайшего сквера — это уже победа. «Попробовать» всегда лучше, чем «надо обязательно».</p></article>
+          <article><Flower>3</Flower><h3>Никаких «норм» по скорости</h3><p>Нет необходимости бежать или идти быстрым шагом. Гуляй так, как тебе комфортно.</p></article>
         </div>
       </section>
 
@@ -111,7 +111,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
           <div className="section-label">06 / партнёрская подборка</div>
           <p className="partner-mark">Mary’s Recipes</p>
           <h2>Что положить<br />в корзинку</h2>
-          <p>Идеи перекусов для прогулки уже собраны в приложении. Выбирай удобный магазин и смотри рецепты.</p>
+          <p>Смотри рецепты в приложении Mary’s Recipes:</p>
           <div className="app-links">{apps.map(([name, url]) => <a key={name} href={url} target="_blank" rel="noreferrer">{name} ↗</a>)}</div>
         </div>
         <div className="food-collage">
@@ -123,7 +123,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
 
       <section className="workouts section">
         <div className="section-label">07 / без коврика</div>
-        <div className="workout-head"><h2>Три тренировки<br />под открытым небом</h2><p>Их можно делать в кроссовках прямо на траве или дорожке, не пачкая одежду и не таская с собой коврик.</p></div>
+        <div className="workout-head"><h2>Как подвигаться<br />без коврика</h2><p>Если одной прогулки в парке мало, можно добавить тренировку. Мы подобрали три коротких видео для улицы: их можно делать в кроссовках прямо на траве или дорожке.</p></div>
         <p className="important"><b>Важно:</b> тебе не обязательно выполнять всё на максимум. Можно просто попробовать начать и посмотреть, как откликнется тело.</p>
         <div className="video-grid">
           {videos.map(([number, title, url, image]) => <a key={number} href={url} target="_blank" rel="noreferrer" className="video-card"><span className="video-cover"><img src={image} alt="Превью видеотренировки" /><span className="play">▶</span></span><small>{number}</small><h3>{title}</h3></a>)}
@@ -134,14 +134,14 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         <div className="next-copy">
           <div className="section-label">08 / твой следующий шаг</div>
           <h2>Начни с<br /><em>15 минут</em></h2>
-          <p>Выбери ближайший парк, в котором тебе ещё не удалось побывать, и реши, какой перекус возьмёшь с собой в ближайшие выходные. Этого уже достаточно, чтобы запустить процесс «разморозки».</p>
+          <p>Выбери ближайший парк, в котором тебе ещё не удалось побывать, и реши, какой перекус возьмёшь с собой в ближайшие выходные. Начни с 15-минутной прогулки — этого уже достаточно, чтобы запустить процесс «разморозки».</p>
         </div>
         <form className="walk-card">
           <p>План на выходные</p>
-          <label><input type="checkbox" /> <span>Выбрать новый парк</span></label>
-          <label><input type="checkbox" /> <span>Решить, что взять на перекус</span></label>
-          <label><input type="checkbox" /> <span>Оставить себе 15 минут</span></label>
-          <div className="walk-ready">Можно не идеально.<br />Можно просто пойти.</div>
+          <label><input type="checkbox" /> <span>Выбрать ближайший парк, где ещё не удалось побывать</span></label>
+          <label><input type="checkbox" /> <span>Решить, какой перекус взять с собой</span></label>
+          <label><input type="checkbox" /> <span>Запланировать 15-минутную прогулку</span></label>
+          <div className="walk-ready">Начни с 15 минут.<br />Этого уже достаточно.</div>
         </form>
       </section>
 
