@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type Variant = "editorial" | "newspaper" | "thaw";
 
 const variants = {
@@ -28,14 +26,10 @@ function Flower({ children }: { children?: React.ReactNode }) {
 export function WalkGuide({ variant }: { variant: Variant }) {
   const current = variants[variant];
   return (
-    <main className={`guide ${variant}`}>
-      <nav className="guide-nav" aria-label="Навигация по версиям">
-        <Link href="/" className="mini-brand">#sekta <i>×</i> Mary’s Recipes</Link>
-        <div className="variant-links">
-          {(Object.keys(variants) as Variant[]).map((key) => (
-            <Link key={key} href={`/${key}`} aria-current={key === variant ? "page" : undefined}>{variants[key].label}</Link>
-          ))}
-        </div>
+    <main className={`guide ${variant}`} id="top">
+      <nav className="guide-nav" aria-label="Основная навигация">
+        <a href="#top" className="mini-brand">#sekta <i>×</i> Mary’s Recipes</a>
+        <span className="nav-edition">Сезон прогулок · летний гид</span>
       </nav>
 
       <header className="hero">
@@ -143,7 +137,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
           <p className="course-lead">В гайде — один способ добавить движения. В «Летнем прайме» — три недели коротких тренировок, ухода за собой и лёгкого рациона.</p>
           <div className="course-facts">
             <span>тренировки до 30 минут</span>
-            <span>старт в любой день</span>
+            <span>старт завтра</span>
             <span>самостоятельный формат</span>
           </div>
           <div className="course-buy">
@@ -153,7 +147,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         </div>
       </section>
 
-      <footer className="guide-footer"><div><b>#sekta</b><span>×</span><b>Mary’s Recipes</b></div><p>Пусть это лето станет временем, когда ты разрешишь себе просто быть, гулять и наслаждаться моментом.</p><Link href="/">Посмотреть другие упаковки ↑</Link></footer>
+      <footer className="guide-footer"><div><b>#sekta</b><span>×</span><b>Mary’s Recipes</b></div><p>Пусть это лето станет временем, когда ты разрешишь себе просто быть, гулять и наслаждаться моментом.</p><a href="#top">Вернуться к началу ↑</a></footer>
     </main>
   );
 }

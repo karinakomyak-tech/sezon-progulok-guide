@@ -9,7 +9,7 @@ await mkdir(out, { recursive: true });
 await cp(join(root, "public/walk-images"), join(out, "assets/walk-images"), { recursive: true });
 await cp(join(root, "public/og.png"), join(out, "assets/og.png"));
 
-const routes = [["/", "index.html"], ["/editorial", "editorial.html"], ["/newspaper", "newspaper.html"], ["/thaw", "thaw.html"]];
+const routes = [["/", "index.html"]];
 for (const [route, file] of routes) {
   let html = await (await fetch(`http://localhost:3000${route}`)).text();
   html = html
@@ -27,5 +27,5 @@ for (const [route, file] of routes) {
   await writeFile(join(out, file), html);
 }
 await cp(join(root, "public/favicon.svg"), join(out, "assets/favicon.svg"));
-await writeFile(join(out, "README.txt"), "СЕЗОН ПРОГУЛОК — HTML-ПАКЕТ\n\nОткройте index.html, чтобы выбрать одну из трёх упаковок.\nКаждая версия также доступна отдельным файлом: editorial.html, newspaper.html, thaw.html.\nПапка assets обязательна: в ней находятся фотографии и обложка для соцсетей.\nВсе внешние ссылки на статью, приложения Mary’s Recipes и видеотренировки сохранены.\n", "utf8");
+await writeFile(join(out, "README.txt"), "СЕЗОН ПРОГУЛОК — ГАЗЕТНАЯ HTML-ВЕРСИЯ\n\nОткройте index.html.\nПапка assets обязательна: в ней находятся фотографии и обложка для соцсетей.\nВсе внешние ссылки на статью, приложения Mary’s Recipes, видеотренировки и курс «Летний прайм» сохранены.\n", "utf8");
 console.log(out);
