@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 type Variant = "editorial" | "newspaper" | "thaw";
 
 const variants = {
@@ -25,6 +29,30 @@ function Flower({ children }: { children?: React.ReactNode }) {
 
 export function WalkGuide({ variant }: { variant: Variant }) {
   const current = variants[variant];
+  const [showCourseNudge, setShowCourseNudge] = useState(false);
+  const [courseNudgeClosed, setCourseNudgeClosed] = useState(false);
+
+  useEffect(() => {
+    const hero = document.querySelector(".hero");
+    const course = document.querySelector(".course-offer");
+    if (!hero || !course) return;
+
+    let heroVisible = true;
+    let courseVisible = false;
+    const update = () => setShowCourseNudge(!heroVisible && !courseVisible);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === hero) heroVisible = entry.isIntersecting;
+        if (entry.target === course) courseVisible = entry.isIntersecting;
+      });
+      update();
+    }, { threshold: 0.01 });
+
+    observer.observe(hero);
+    observer.observe(course);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className={`guide ${variant}`} id="top">
       <nav className="guide-nav" aria-label="Основная навигация">
@@ -148,6 +176,16 @@ export function WalkGuide({ variant }: { variant: Variant }) {
       </section>
 
       <footer className="guide-footer"><div><b>#sekta</b><span>×</span><b>Mary’s Recipes</b></div><p>Пусть это лето станет временем, когда ты разрешишь себе просто быть, гулять и наслаждаться моментом.</p><a href="#top">Вернуться к началу ↑</a></footer>
+
+      {showCourseNudge && !courseNudgeClosed && (
+        <aside className="course-nudge" aria-label="Курс Летний прайм">
+          <a href={courseUrl} target="_blank" rel="noreferrer">
+            <span><strong>Летний прайм</strong><small>3 недели · 2 900 ₽ · старт завтра</small></span>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <button type="button" onClick={() => setCourseNudgeClosed(true)} aria-label="Скрыть предложение курса">×</button>
+        </aside>
+      )}
     </main>
   );
 }
