@@ -11,7 +11,7 @@ const variants = {
 };
 
 const articleUrl = "https://sxsprtscnc.ru/tpost/forest-bathing";
-const courseUrl = "https://sektaschool.ru/online/summerprime?utm_source=bot&utm_medium=gaidoteki&utm_campaign=summerprime";
+const courseUrl = "https://sektaschool.ru/online/summerprime?utm_source=bot&utm_medium=gaidwalk&utm_campaign=summerprime";
 const apps = [
   ["AppStore", "https://apps.apple.com/us/app/icook-meal-planner-food-prep/id1434244144?ppid=19b9b54b-a30a-424d-9dcf-3515ce74b3ba"],
   ["RuStore", "https://apps.rustore.ru/app/com.insolence.recipes.rustore"],
