@@ -28,8 +28,34 @@
 
 .newspaper .course-offer{background:#f3eadd;color:#191c19;border-top:8px solid}.newspaper .course-photo{border-radius:0;filter:grayscale(.35);border:1px solid}.newspaper .course-name{color:#191c19}.newspaper .course-copy h2{font-family:'Roboto Condensed',sans-serif;text-transform:uppercase;line-height:.73}.newspaper .course-lead{color:#292929}.newspaper .course-facts span{border-color:#191c19;border-radius:0}.newspaper .course-buy{border-color:#191c19}.newspaper .course-buy small{color:#555}.newspaper .course-buy a{background:#ff5a5f;color:#fff;border:3px double #191c19}.thaw .course-offer{background:#263b2e}.thaw .course-photo{border-radius:50% 50% 34px 34px}.thaw .course-copy h2{font-style:italic}
 
+/* editorial photo update */
+.newspaper .hero{min-height:clamp(690px,82svh,880px);grid-template-columns:1.08fr .92fr}.newspaper .hero-copy{justify-content:center;padding:3vh 0}.newspaper .hero-image{filter:none;min-height:680px;max-height:810px}.newspaper .hero-image img{object-position:center 38%}.intro{grid-template-columns:.45fr 1.5fr .8fr;gap:clamp(28px,4vw,70px);align-items:start}.intro-photo{height:620px;margin:0;position:relative;border:1px solid var(--ink);overflow:hidden}.intro-photo img{height:100%;object-position:center}.intro-photo figcaption{position:absolute;left:14px;bottom:14px;background:var(--paper);border:1px solid;padding:9px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.newspaper .image-stat img{object-position:center}.newspaper .forest-photo img{filter:none;object-position:center 32%}.newspaper .course-photo{filter:none}.newspaper .course-photo img{object-position:center 28%}
+.newspaper .hero-copy{min-height:560px}
+.stat strong em{display:inline-block;font-size:.34em;font-style:normal;letter-spacing:-.035em;text-transform:uppercase}
+
 @media(max-width:900px){.variant-links{display:none}.choice-grid{grid-template-columns:1fr}.choice{min-height:320px}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{min-height:690px}.hero-image{min-height:650px}.hero-sticker{right:8%;top:49%}.intro,.forest,.picnic,.next-step,.course-offer{grid-template-columns:1fr}.intro{gap:50px}.stat-grid{grid-template-columns:1fr 1fr}.main-stat{grid-column:span 2}.forest-photo{min-height:650px}.photo-note{right:15px}.practice-grid,.video-grid{grid-template-columns:1fr}.practice-grid article{min-height:360px}.workout-head{grid-template-columns:1fr}.food-collage{margin-top:25px}.course-photo{height:720px;min-height:0}.guide-footer{grid-template-columns:1fr}.guide-footer>a{text-align:left}.newspaper .hero{grid-template-columns:1fr}}
-@media(max-width:600px){.section{padding:72px 20px}.guide-nav{height:58px}.chooser{padding:24px 16px}.chooser .eyebrow{margin-top:13vh}.chooser h1{font-size:76px}.chooser-lead{font-size:15px;margin:35px 0}.choice{padding:20px;min-height:290px}.choice h2{font-size:42px}.hero{padding:18px}.hero-copy{min-height:620px;padding-top:10vh}.hero h1{font-size:74px}.hero-deck{font-size:20px}.hero-image{min-height:500px;border-radius:180px 180px 20px 20px}.hero-sticker{width:100px;height:100px;font-size:23px;top:52%}.intro-copy h2,.why h2,.practice h2,.workouts h2{font-size:54px}.lead{font-size:23px}.stat-grid{grid-template-columns:1fr}.main-stat{grid-column:auto}.stat{min-height:250px}.stat strong{font-size:72px}.reason-list article{grid-template-columns:40px 1fr}.reason-list p{font-size:16px}.forest-photo{min-height:520px}.forest-copy h2{font-size:52px}.forest-copy>p{font-size:17px}.practice-grid article{border-radius:160px 160px 20px 20px}.picnic h2{font-size:64px}.partner-mark{margin-top:55px}.food-collage .food-main{height:260px}.food-collage img{height:170px}.workout-head h2{font-size:52px}.important{border-radius:18px;line-height:1.4}.next-step h2{font-size:78px}.walk-card{padding:55px 24px 30px;min-height:520px}.walk-card>p{font-size:30px}.guide-footer{padding:55px 20px}.newspaper .hero-copy{min-height:670px}}
+@media(max-width:600px){.section{padding:72px 20px}.guide-nav{height:58px}.chooser{padding:24px 16px}.chooser .eyebrow{margin-top:13vh}.chooser h1{font-size:76px}.chooser-lead{font-size:15px;margin:35px 0}.choice{padding:20px;min-height:290px}.choice h2{font-size:42px}.hero{padding:18px}.hero-copy{min-height:620px;padding-top:10vh}.hero h1{font-size:74px}.hero-deck{font-size:20px}.hero-image{min-height:500px;border-radius:180px 180px 20px 20px}.hero-sticker{width:100px;height:100px;font-size:23px;top:52%}.intro-copy h2,.why h2,.practice h2,.workouts h2{font-size:54px}.lead{font-size:23px}.stat-grid{grid-template-columns:1fr}.main-stat{grid-column:auto}.stat{min-height:250px}.stat strong{font-size:72px}.reason-list article{grid-template-columns:40px 1fr}.reason-list p{font-size:16px}.forest-photo{min-height:520px}.forest-copy h2{font-size:52px}.forest-copy>p{font-size:17px}.practice-grid article{border-radius:160px 160px 20px 20px}.picnic h2{font-size:64px}.partner-mark{margin-top:55px}.food-collage .food-main{height:260px}.food-collage img{height:170px}.workout-head h2{font-size:52px}.important{border-radius:18px;line-height:1.4}.next-step h2{font-size:78px}.walk-card{padding:55px 24px 30px;min-height:520px}.walk-card>p{font-size:30px}.guide-footer{padding:55px 20px}.newspaper .hero-copy{min-height:520px}}
 @media(max-width:600px){.nav-edition{font-size:9px;letter-spacing:.06em}.course-photo{height:480px}.course-photo>span{width:88px;height:88px;font-size:12px}.course-name{margin-top:46px}.course-copy h2{font-size:78px;margin-bottom:40px}.course-lead{font-size:18px}.course-buy{grid-template-columns:1fr}.course-buy a{min-height:68px}}
-@media(max-width:600px){.course-nudge{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));width:calc(100vw - 24px)}.course-nudge>a{padding-left:13px}}
+@media(max-width:600px){.course-nudge{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));width:calc(100vw - 24px)}.course-nudge>a{padding-left:13px}.intro-photo{height:520px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.choice{transition:none}.course-nudge{animation:none}}
+
+@media(max-width:600px){
+  .newspaper .hero h1{
+    max-width:100%;
+    font-size:clamp(46px,14vw,55px);
+    line-height:.84;
+    letter-spacing:-.065em;
+    overflow-wrap:normal;
+  }
+  .newspaper .food-collage{
+    gap:8px;
+  }
+  .newspaper .food-collage .food-main{
+    height:360px;
+    object-position:center 62%;
+  }
+  .newspaper .food-collage img{
+    height:210px;
+    object-position:center;
+  }
+}

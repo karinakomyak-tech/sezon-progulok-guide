@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Сезон прогулок — летний гид #Sekta",
     description: "Летний гид по активности и перекусам от #Sekta и Mary’s Recipes.",
-    images: [{ url: "/walk-images/p3-04.jpg", width: 1200, height: 1600, alt: "Прогулка в парке" }],
+    images: [{ url: "/walk-images/olga-forest-selfie.png", width: 405, height: 720, alt: "Оля на прогулке в лесу" }],
   },
-  twitter: { card: "summary_large_image", images: ["/walk-images/p3-04.jpg"] },
+  twitter: { card: "summary_large_image", images: ["/walk-images/olga-forest-selfie.png"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

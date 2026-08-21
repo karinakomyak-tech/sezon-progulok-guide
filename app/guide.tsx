@@ -63,11 +63,10 @@ export function WalkGuide({ variant }: { variant: Variant }) {
       <header className="hero">
         <div className="hero-copy">
           <p className="kicker">{current.kicker}</p>
-          <h1>{variant === "newspaper" ? <>Прогулка —<br />уже движение</> : variant === "thaw" ? <>Начни<br />с пяти минут</> : <>Гулять<br />считается</>}</h1>
+          <h1>{variant === "newspaper" ? <>Прогуляемся?</> : variant === "thaw" ? <>Начни<br />с пяти минут</> : <>Гулять<br />считается</>}</h1>
           <p className="hero-deck">Время для себя: как добавить движения и энергии в каждый день</p>
-          <a href="#start" className="primary-link">Читать гид <span>↓</span></a>
         </div>
-        <figure className="hero-image"><img src={variant === "newspaper" ? "/walk-images/p3-04.jpg" : "/walk-images/p4-12.jpg"} alt="Прогулка в зелёном парке" /><figcaption>Летний гид по активности и перекусам</figcaption></figure>
+        <figure className="hero-image"><img src={variant === "newspaper" ? "/walk-images/olga-forest-selfie.png" : "/walk-images/p4-12.jpg"} alt="Оля на прогулке в лесу" /><figcaption>Летний гид по активности и перекусам</figcaption></figure>
         <div className="hero-sticker">20–40<br /><small>минут в день</small></div>
       </header>
 
@@ -75,8 +74,9 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         <div className="section-label">01 / без самокритики</div>
         <div className="intro-copy">
           <h2>Время для себя</h2>
-          <p className="lead">Мы в <b>#Sekta</b> верим, что забота о себе — это про уважение к своим ресурсам. Если зимой движения было мало, это не повод для самокритики, а знак, что телу пора немного помочь.</p>
+          <p className="lead">Мы в <b>#Sekta</b> верим, что забота о себе строится на уважении к своим ресурсам. Если в последнее время движения было мало — это не повод для самокритики, а знак, что телу пора немного помочь.</p>
         </div>
+        <figure className="intro-photo"><img src="/walk-images/walk-sky-friends.png" alt="Прогулка вдвоём в солнечном поле" /><figcaption>Выйти вместе — тоже план</figcaption></figure>
       </section>
 
       <section className="numbers section">
@@ -85,10 +85,10 @@ export function WalkGuide({ variant }: { variant: Variant }) {
           <p>Международные рекомендации, на которые мы опираемся, говорят, что для отличного самочувствия не нужно жить в спортзале.</p>
         </div>
         <div className="stat-grid">
-          <article className="stat main-stat"><strong>150–300</strong><span>минут умеренной активности в неделю достаточно, чтобы поддержать сердце и обмен веществ.</span></article>
-          <article className="stat"><strong>20–40</strong><span>минут активной прогулки в день — и ты уже в «зелёной зоне» здоровья.</span></article>
-          <article className="stat image-stat"><img src="/walk-images/p3-05.jpg" alt="Прогулка за продуктами тоже считается движением" /></article>
-          <article className="stat"><strong>Любое</strong><span>движение — будь то прогулка за любимым кофе, закупка продуктов или уборка дома — уже вклад в твой энергетический баланс.</span></article>
+          <article className="stat main-stat"><strong>150–300 <em>минут</em></strong><span>Умеренной активности в неделю достаточно, чтобы поддержать сердце и обмен веществ.</span></article>
+          <article className="stat"><strong>20–40 <em>минут</em></strong><span>Активной прогулки в день — и ты уже в «зелёной зоне» здоровья.</span></article>
+          <article className="stat image-stat"><img src="/walk-images/olga-city-walk.png" alt="Оля идёт пешком по городу" /></article>
+          <article className="stat"><strong>Любое <em>движение</em></strong><span>Будь то прогулка за любимым кофе, закупка продуктов или уборка дома — это уже вклад в твой энергетический баланс.</span></article>
         </div>
       </section>
 
@@ -104,7 +104,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
       </section>
 
       <section className="forest section">
-        <div className="forest-photo"><img src="/walk-images/p4-10.jpg" alt="Отдых на природе" /><div className="photo-note">Купальник<br />не понадобится</div></div>
+        <div className="forest-photo"><img src="/walk-images/olga-field-bw.png" alt="Оля отдыхает в поле" /><div className="photo-note">Купальник<br />не понадобится</div></div>
         <div className="forest-copy">
           <div className="section-label">04 / синрин-йоку</div>
           <h2>Лесное купание:<br />бесплатное спа<br />для мозга</h2>
@@ -124,29 +124,29 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         <h2>Как сделать прогулки<br />частью жизни</h2>
         <div className="practice-grid">
           <article><Flower>1</Flower><h3>Осознанность в моменте</h3><p>На минуту отложи телефон и просто заметь: какого цвета сегодня небо? Как пахнет воздух после дождя?</p></article>
-          <article><Flower>2</Flower><h3>Принимай любой результат</h3><p>Если сегодня удалось дойти только до ближайшего сквера — это уже победа. «Попробовать» всегда лучше, чем «надо обязательно».</p></article>
-          <article><Flower>3</Flower><h3>Никаких «норм» по скорости</h3><p>Нет необходимости бежать или идти быстрым шагом. Гуляй так, как тебе комфортно.</p></article>
+          <article><Flower>2</Flower><h3>Принимай любой результат</h3><p>Если сегодня удалось дойти только до ближайшего сквера — это уже победа. Двигайся в удовольствие, не заставляй себя.</p></article>
+          <article><Flower>3</Flower><h3>Никаких норм по скорости</h3><p>Нет необходимости бежать или идти быстрым шагом. Гуляй так, как тебе комфортно.</p></article>
         </div>
       </section>
 
       <section className="picnic section">
         <div className="picnic-copy">
-          <div className="section-label">06 / партнёрская подборка</div>
+          <div className="section-label">06 / подборка рецептов</div>
           <p className="partner-mark">Mary’s Recipes</p>
           <h2>Что положить<br />в корзинку</h2>
           <p>Смотри рецепты в приложении Mary’s Recipes:</p>
           <div className="app-links">{apps.map(([name, url]) => <a key={name} href={url} target="_blank" rel="noreferrer">{name} ↗</a>)}</div>
         </div>
         <div className="food-collage">
-          <img src="/walk-images/p5-20.jpg" alt="Онигири-сэндвич для пикника" className="food-main" />
-          <img src="/walk-images/p5-23.jpg" alt="Хлебец с арахисовой пастой и малиной" />
-          <img src="/walk-images/p5-27.jpg" alt="Ролл с овощами" />
+          <img src="/walk-images/picnic-food-main.jpg" alt="Пикник с роллами, ягодами и рисовыми сэндвичами" className="food-main" />
+          <img src="/walk-images/picnic-food-wraps.jpg" alt="Овощные роллы и ягоды на пикнике" />
+          <img src="/walk-images/picnic-food-rice.jpg" alt="Рисовые сэндвичи и ягоды на пикниковом пледе" />
         </div>
       </section>
 
       <section className="workouts section">
         <div className="section-label">07 / без коврика</div>
-        <div className="workout-head"><h2>Как подвигаться<br />без коврика</h2><p>Если одной прогулки в парке мало, можно добавить тренировку. Мы подобрали три коротких видео для улицы: их можно делать в кроссовках прямо на траве или дорожке.</p></div>
+        <div className="workout-head"><h2>Как подвигаться<br />без коврика</h2><p>Если одной прогулки в парке мало, можно добавить упражнения. Мы подобрали три коротких тренировки для улицы: их можно делать в кроссовках прямо на траве или дорожке.</p></div>
         <p className="important"><b>Важно:</b> тебе не обязательно выполнять всё на максимум. Можно просто попробовать начать и посмотреть, как откликнется тело.</p>
         <div className="video-grid">
           {videos.map(([number, title, url, image]) => <a key={number} href={url} target="_blank" rel="noreferrer" className="video-card"><span className="video-cover"><img src={image} alt="Превью видеотренировки" /><span className="play">▶</span></span><small>{number}</small><h3>{title}</h3></a>)}
@@ -155,17 +155,17 @@ export function WalkGuide({ variant }: { variant: Variant }) {
 
       <section className="course-offer section">
         <div className="course-photo">
-          <img src="/walk-images/summer-prime-hero.jpg" alt="Летнее утро и отдых на солнце" />
+          <img src="/walk-images/olga-summer-prime.png" alt="Оля в спортивной форме перед тренировкой" />
           <span>3 недели</span>
         </div>
         <div className="course-copy">
-          <div className="section-label">08 / #Sekta · продолжение</div>
+          <div className="section-label">08 / что дальше</div>
           <p className="course-name">Фокусный онлайн-курс</p>
           <h2>Летний<br />прайм</h2>
           <p className="course-lead">В гайде — один способ добавить движения. В «Летнем прайме» — три недели коротких тренировок, ухода за собой и лёгкого рациона.</p>
           <div className="course-facts">
             <span>тренировки до 30 минут</span>
-            <span>старт завтра</span>
+            <span>старт в любой день</span>
             <span>самостоятельный формат</span>
           </div>
           <div className="course-buy">
@@ -175,12 +175,12 @@ export function WalkGuide({ variant }: { variant: Variant }) {
         </div>
       </section>
 
-      <footer className="guide-footer"><div><b>#sekta</b><span>×</span><b>Mary’s Recipes</b></div><p>Пусть это лето станет временем, когда ты разрешишь себе просто быть, гулять и наслаждаться моментом.</p><a href="#top">Вернуться к началу ↑</a></footer>
+      <footer className="guide-footer"><div><b>#sekta</b><span>×</span><b>Mary’s Recipes</b></div><p>Найди время на себя, когда ты разрешишь себе просто быть, гулять и наслаждаться моментом.</p><a href="#top">Вернуться к началу ↑</a></footer>
 
       {showCourseNudge && !courseNudgeClosed && (
         <aside className="course-nudge" aria-label="Курс Летний прайм">
           <a href={courseUrl} target="_blank" rel="noreferrer">
-            <span><strong>Летний прайм</strong><small>3 недели · 2 900 ₽ · старт завтра</small></span>
+            <span><strong>Летний прайм</strong><small>3 недели · 2 900 ₽ · старт в любой день</small></span>
             <i aria-hidden="true">↗</i>
           </a>
           <button type="button" onClick={() => setCourseNudgeClosed(true)} aria-label="Скрыть предложение курса">×</button>
