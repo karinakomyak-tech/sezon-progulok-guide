@@ -1,8 +1,13 @@
 # Сезон прогулок
 
-Летний гид #Sekta × Mary’s Recipes.
+Статический HTML-сайт для GitHub Pages.
 
-```bash
-npm install
-npm run dev
-```
+Сайт: https://karinakomyak-tech.github.io/sezon-progulok-guide/
+
+## Как править
+
+1. Меняй `index.html` (тексты, ссылки, блоки).
+2. Картинки — в `assets/walk-images/`.
+3. Закоммить и запушь в `main`.
+
+Отдельно собирать React не нужно.
