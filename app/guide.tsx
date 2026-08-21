@@ -2,14 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-type Variant = "editorial" | "newspaper" | "thaw";
-
-const variants = {
-  editorial: { label: "Гулять считается", kicker: "Летний спецпроект" },
-  newspaper: { label: "Прогулочная газета", kicker: "Свежий выпуск" },
-  thaw: { label: "Разморозка", kicker: "Можно начать с пяти минут" },
-};
-
 const articleUrl = "https://sxsprtscnc.ru/tpost/forest-bathing";
 const courseUrl = "https://sektaschool.ru/online/summerprime?utm_source=bot&utm_medium=gaidwalk&utm_campaign=summerprime";
 const apps = [
@@ -27,8 +19,7 @@ function Flower({ children }: { children?: React.ReactNode }) {
   return <span className="flower" aria-hidden="true">{children || "●"}</span>;
 }
 
-export function WalkGuide({ variant }: { variant: Variant }) {
-  const current = variants[variant];
+export function WalkGuide() {
   const [showCourseNudge, setShowCourseNudge] = useState(false);
   const [courseNudgeClosed, setCourseNudgeClosed] = useState(false);
 
@@ -54,7 +45,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
   }, []);
 
   return (
-    <main className={`guide ${variant}`} id="top">
+    <main className="guide newspaper" id="top">
       <nav className="guide-nav" aria-label="Основная навигация">
         <a href="#top" className="mini-brand">#sekta <i>×</i> Mary’s Recipes</a>
         <span className="nav-edition">Сезон прогулок · летний гид</span>
@@ -62,11 +53,11 @@ export function WalkGuide({ variant }: { variant: Variant }) {
 
       <header className="hero">
         <div className="hero-copy">
-          <p className="kicker">{current.kicker}</p>
-          <h1>{variant === "newspaper" ? <>Прогуляемся?</> : variant === "thaw" ? <>Начни<br />с пяти минут</> : <>Гулять<br />считается</>}</h1>
+          <p className="kicker">Свежий выпуск</p>
+          <h1>Прогуляемся?</h1>
           <p className="hero-deck">Время для себя: как добавить движения и энергии в каждый день</p>
         </div>
-        <figure className="hero-image"><img src={variant === "newspaper" ? "/walk-images/olga-forest-selfie.png" : "/walk-images/p4-12.jpg"} alt="Оля на прогулке в лесу" /><figcaption>Летний гид по активности и перекусам</figcaption></figure>
+        <figure className="hero-image"><img src="/walk-images/olga-forest-selfie.png" alt="Оля на прогулке в лесу" /><figcaption>Летний гид по активности и перекусам</figcaption></figure>
         <div className="hero-sticker">20–40<br /><small>минут в день</small></div>
       </header>
 
