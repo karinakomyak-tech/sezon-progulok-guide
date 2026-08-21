@@ -165,7 +165,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
           <p className="course-lead">В гайде — один способ добавить движения. В «Летнем прайме» — три недели коротких тренировок, ухода за собой и лёгкого рациона.</p>
           <div className="course-facts">
             <span>тренировки до 30 минут</span>
-            <span>старт в любой день</span>
+            <span>старт завтра</span>
             <span>самостоятельный формат</span>
           </div>
           <div className="course-buy">
@@ -180,7 +180,7 @@ export function WalkGuide({ variant }: { variant: Variant }) {
       {showCourseNudge && !courseNudgeClosed && (
         <aside className="course-nudge" aria-label="Курс Летний прайм">
           <a href={courseUrl} target="_blank" rel="noreferrer">
-            <span><strong>Летний прайм</strong><small>3 недели · 2 900 ₽ · старт в любой день</small></span>
+            <span><strong>Летний прайм</strong><small>3 недели · 2 900 ₽ · старт завтра</small></span>
             <i aria-hidden="true">↗</i>
           </a>
           <button type="button" onClick={() => setCourseNudgeClosed(true)} aria-label="Скрыть предложение курса">×</button>
